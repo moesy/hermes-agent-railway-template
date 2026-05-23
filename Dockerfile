@@ -12,6 +12,7 @@ RUN uv venv "$VIRTUAL_ENV"
 RUN git clone --depth 1 https://github.com/NousResearch/hermes-agent.git /tmp/hermes-agent && \
     cd /tmp/hermes-agent && \
     uv pip install --python "$VIRTUAL_ENV/bin/python" --no-cache -e ".[all]" && \
+    ln -sf "$VIRTUAL_ENV/bin/hermes" /usr/local/bin/hermes && \
     rm -rf /tmp/hermes-agent/.git
 
 COPY requirements.txt /app/requirements.txt
