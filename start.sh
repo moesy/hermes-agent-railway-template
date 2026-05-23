@@ -6,4 +6,4 @@ mkdir -p /data/.hermes/skills
 mkdir -p /data/.hermes/workspace
 mkdir -p /data/.hermes/pairing
 
-exec python /app/server.py
+exec /opt/hermes-venv/bin/python /app/server.py

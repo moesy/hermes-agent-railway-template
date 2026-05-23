@@ -229,7 +229,7 @@ class GatewayManager:
             env.update(env_vars)
 
             self.process = await asyncio.create_subprocess_exec(
-                "hermes", "gateway",
+                "/opt/hermes-venv/bin/hermes", "gateway",
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.STDOUT,
                 env=env,
